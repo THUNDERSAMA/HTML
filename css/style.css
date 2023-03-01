@@ -19,7 +19,9 @@ body {
   font-family: Lato, sans-serif;
   color: #222324;
   line-height: 1.6;
-  background-color: #fff;
+      background-color: #bdaad4;
+    background-image: linear-gradient(0deg, #bdaad4 0%, #23153c 55%, #23153c 100%);
+
 }
 
 /* Typography */
@@ -1613,7 +1615,7 @@ fieldset[disabled] .s-btn {
 }
 
 .s-header__shrink .s-header__navbar {
-  background: #fff;
+  background:#84739c;
 }
 
 .s-header__shrink .s-header__logo-img-default {
