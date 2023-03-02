@@ -28,13 +28,13 @@
         <link href="css/global/global.css" rel="stylesheet" type="text/css"/>
 
         <!-- Favicon -->
-        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+        <!-- <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> -->
         
         <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
         <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 
         <link rel="stylesheet" href="font.css">
-        <link href="https://fonts.cdnfonts.com/css/space-armor" rel="stylesheet">
+     
        <style> @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
   
    </style>
@@ -42,7 +42,7 @@
     <!-- End Head -->
 
     <!-- Body -->
-    <body>
+    <body id="bdback">
   <div class="glitchwrapper">
    <div class="glitch" data-glitch="KRITANJ">KRITANJ</div>
 </div>
@@ -173,22 +173,8 @@
                 <p class="text-uppercase g-color--white g-letter-spacing--3 g-margin-b-0--xs">Register now</p>
             </a>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
-<script>
-    
-VANTA.GLOBE({
-  el: "#heromation",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-})
-</script>
-        <div id="js__scroll-to-section" class="container g-padding-y-80--xs g-padding-y-125--sm">
+
+        <div id="" class="container g-padding-y-80--xs g-padding-y-125--sm">
             <div class="g-text-center--xs g-margin-b-100--xs">
                 <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Welcome to KRITANJ</p>
                 <h2 class=""style="font-family: 'Bad Script', cursive;font-size:56px; color:white;">We Create Beautiful Experiences </h2>
@@ -343,7 +329,7 @@ VANTA.GLOBE({
         <!-- End Subscribe -->
 
         <!-- Portfolio Filter -->
-        <div class="container g-padding-y-80--xs">
+        <div class="container g-padding-y-80--xs" id="js__scroll-to-section">
             <div class="g-text-center--xs g-margin-b-40--xs">
                 <h2 class=" g-color--primary" style="font-family: 'Bad Script', cursive;font-size:56px;">Events</h2>
             </div>
@@ -597,10 +583,10 @@ VANTA.GLOBE({
         <!-- End Clients -->
 
         <!-- News -->
-        <div class="container g-padding-y-80--xs g-padding-y-125--sm">
+        <div class="container g-padding-y-80--xs g-padding-y-125--sm" id="blgbavck">
             <div class="g-text-center--xs g-margin-b-80--xs">
                 <p class="text-uppercase g-font-size-14--xs g-font-weight--700 g-color--primary g-letter-spacing--2 g-margin-b-25--xs">Blog</p>
-                <h2 class="g-font-size-32--xs g-font-size-36--md">Latest News</h2>
+                <h2 class="g-font-size-32--xs g-font-size-36--md" style="font-family: 'Bad Script', cursive; color:white;">Latest News</h2>
             </div>
             <div class="row">
                 <div class="col-sm-4 g-margin-b-30--xs g-margin-b-0--md">
@@ -995,7 +981,7 @@ VANTA.GLOBE({
         <script type="text/javascript" src="vendor/jquery.min.js"></script>
         <script type="text/javascript" src="vendor/jquery.migrate.min.js"></script>
         <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="vendor/jquery.smooth-scroll.min.js"></script>
+        <!-- <script type="text/javascript" src="vendor/jquery.smooth-scroll.min.js"></script> -->
         <script type="text/javascript" src="vendor/jquery.back-to-top.min.js"></script>
         <script type="text/javascript" src="vendor/scrollbar/jquery.scrollbar.min.js"></script>
         <script type="text/javascript" src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
@@ -1020,20 +1006,50 @@ VANTA.GLOBE({
         <script type="text/javascript" src="js/components/wow.min.js"></script>
       <script type="text/javascript">
         const glitchwrapper = document.querySelector('.glitchwrapper');
-       
-          const fadeOutEffect = setInterval(() => {
+      
+          const fadeOutEffect = () =>setInterval(() => {
   if (!glitchwrapper.style.opacity) {
     glitchwrapper .style.opacity = 1;
   }
   if (glitchwrapper .style.opacity > 0) {
     glitchwrapper.style.opacity -= 0.1;
+   //
   } else {
+    //console.log("called");
     clearInterval(fadeOutEffect);
+     glitchwrapper.style.display = "none";
   }
 }, 500);
-           document.addEventListener('load', fadeOutEffect);
-      </script>
 
+           window.addEventListener('load', fadeOutEffect);
+      </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
+<script>
+    
+VANTA.GLOBE({
+  el: "#heromation",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+})
+VANTA.BIRDS({
+  el: "#blgbavck",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0x23153c
+})
+</script>
     </body>
     <!-- End Body -->
 </html>
